@@ -1,14 +1,14 @@
 pipeline { 
     environment { 
         registry = "bndah/mywelcomepage" 
-        registryCredential = 'dockerhub_id' 
+        registryCredential = 'bndah' 
         dockerImage = '' 
     }
     agent any 
     stages { 
         stage('Cloning our Git') { 
             steps { 
-                git 'https://github.com/YourGithubAccount/YourGithubRepository.git' 
+                git 'https://github.com/Betrand-DevOps-project/jenkins-pipeline-using-docker-.git' 
             }
         } 
         stage('Building our image') { 
